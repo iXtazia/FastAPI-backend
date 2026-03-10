@@ -32,7 +32,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Run the server
+4. Run the server:
 
 ```bash
 fastapi dev
