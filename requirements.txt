@@ -1,0 +1,10 @@
+# Change env
+# source .venv/bin/activate
+
+# End env
+# deactivate
+
+# Dependencies to install with the command line :
+# > pip install -r requirements.txt
+
+fastapi[standard]
