@@ -2,7 +2,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import certifi
 
-from app.core.config import MONGO_URI
+from app.core.config import MONGO_URI, DB_NAME
 
 client = MongoClient(
     MONGO_URI,
@@ -17,4 +17,4 @@ try:
 except Exception as e:
     print("Error:", e)
 
-db = client["items"]
+db = client[DB_NAME]

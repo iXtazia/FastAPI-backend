@@ -26,13 +26,21 @@ cd FastAPI-backend
 source .venv/bin/activate
 ```
 
-3. Install dependencies:
+3. Configure environment variables in .env
+
+```bash
+# Database Configuration
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/
+DB_NAME=items
+```
+
+4. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the server:
+5. Run the server:
 
 ```bash
 fastapi dev
