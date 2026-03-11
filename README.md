@@ -1,14 +1,18 @@
 # API with FastAPI
 
-This is a simple API built with FastAPI using Firebase Authentication.
+This is a simple API built with FastAPI using MongoDB and Firebase Authentication (optional).
 
 ## Prerequisites
 
-- Python (v3.0.0 or higher)
+- Python (v3.10 or higher recommended)
+- MongoDB Atlas account (or local MongoDB)
+- Firebase project (optional, for authentication)
 
 ## Technology Stack
 
 - **Framework**: FastAPI
+- **Database**: MongoDB
+- **Authentication**: Firebase Admin SDK (optional)
 - **Documentation**: Swagger
 
 ## Installation
@@ -20,30 +24,36 @@ git clone <repository-url>
 cd FastAPI-backend
 ```
 
-2. Create environment
+2. Create your environment
 
 ```bash
+python -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Configure environment variables in .env
+3. Add your Firebase Admin SDK JSON to the project root as service-account.json (optional)
+
+4. Configure environment variables in .env
 
 ```bash
 # Database Configuration
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/
 DB_NAME=database
+
+# Optional
+GOOGLE_APPLICATION_CREDENTIALS="./service-account.json"
 ```
 
-4. Install dependencies:
+5. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Run the server:
+6. Run the server:
 
 ```bash
-fastapi dev
+uvicorn app.main:app --reload
 ```
 
 ## API Documentation
