@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from firebase_admin import auth
 
-from app.models.firebase_create_user import FirebaseUserCreate
+from app.models.firebase_user_create import FirebaseUserCreate
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
