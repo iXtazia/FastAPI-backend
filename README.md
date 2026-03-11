@@ -1,6 +1,6 @@
 # API with FastAPI
 
-This is a simple API built with FastAPI. It has 3 endpoints: one to get an item by its ID, one to get all items, and one to update an item.
+This is a simple API built with FastAPI using Firebase Authentication.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ source .venv/bin/activate
 ```bash
 # Database Configuration
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/
-DB_NAME=items
+DB_NAME=database
 ```
 
 4. Install dependencies:

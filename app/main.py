@@ -1,7 +1,10 @@
+import firebase_admin
 from fastapi import FastAPI
-from app.routers import hello_word, item
+
+from app.routers import users
 
 app = FastAPI()
 
-app.include_router(hello_word.router)
-app.include_router(item.router)
+app.include_router(users.router)
+
+firebase_admin.initialize_app()
